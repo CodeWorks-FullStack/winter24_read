@@ -19,6 +19,7 @@
 
 <body class="debug">
   <nav class="container-fluid bg-black sticky-top">
+    <!-- NOTE ⬆️ sticky top, sticks to the parent. Here our 'nav' sticks to the 'body' so it scrolls with us -->
     <section class="row  justify-content-end">
       <div class="col-2 bg-danger p-2 text-center fw-bold">
         <a class="text-white brand-font" href="">READ!!</a>
@@ -31,6 +32,7 @@
         <h1 class="brand-font giant-font">START READING</h1>
       </div>
       <div class="col-md-4 mb-2">
+        <!-- NOTE relative-card is our -->
         <div class="relative-card bg-light shadow p-4">
           <p class="tall-paragraph">It’s the key to more success, why not live smooth? Why live rough? You should never
             complain, complaining
@@ -62,6 +64,7 @@
       <!-- SECTION filter -->
       <div class="col-md-3 d-none d-md-block">
         <div class="sticky-top filter-menu bg-black text-light p-3">
+          <!-- NOTE ⬆️ sticky top here, sticks to the column, so it follows with our cards on the right -->
           <div class="mb-2">
             <span>Filter</span>
           </div>
@@ -89,7 +92,8 @@
       </div>
       <!-- SECTION cards -->
       <div class="col-12 col-md-9">
-        <!-- NOTE added darkmode for this section for better dark card readability-->
+        <!-- NOTE added darkmode (data-bs-theme) for this section for better dark card readability-->
+        <!-- NOTE these we create a nested row, so we can stack items on the right side of our page, seperate from our left side filter -->
         <section class="row g-2 justify-content-center" data-bs-theme="dark">
           <div class="col-6 col-md-4">
             <div class="card bg-dark text-light rounded-0">

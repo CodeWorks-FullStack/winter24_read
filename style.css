@@ -25,40 +25,47 @@ nav a {
   line-height: 2em;
 }
 
+/* NOTE transform, will move the element after it is rendered to the page */
 .transform-card {
   transform: translateY(2em);
   /* transform: scaleY(2); */
 }
 
+/* NOTE position relative creates a 'containing-block' to "ground" position absolute elements inside */
 .magic-container {
   position: relative;
   /* relative creates us a new "containing-block" for our absolute item*/
 }
 
+/* NOTE position absolute pulls the element out of the standard "flow" and grounds it to the nearest parent 'containing block' */
 .magic-card {
   position: absolute;
-  /* absolute pulls this element out of the html flow, and anchors is to the nearest parent "Containing-block" */
   top: 0;
+  /* 0 pixels away from the top*/
   left: 10px;
+  /* 10px away from the left*/
   /* right: 100px; */
   /* bottom: 50%; */
 }
 
 .filter-menu {
   top: 3em;
+  /* moves are filter menu down a little so it doesn't overlap our sticky navbar*/
 }
 
 .card img {
   height: 12em;
   object-fit: cover;
+  /* height and object-fit crops the different sized images so the cards stay the same size*/
   object-position: center;
   /* background-color: rgba(128, 128, 128, 0.529); */
 }
 
 
+/* NOTE what ever classes are in here, TURN ON at the medium break point */
+/* we made the media rule match with bootstraps breakpoints for md, since we used md so often*/
 @media screen and (min-width: 768px) {
 
-  /* NOTE what ever classes are in here, TURN ON at the medium break point */
   .relative-card {
     position: relative;
     top: 8em;
@@ -72,7 +79,7 @@ nav a {
     margin-bottom: -8em;
   }
 
-  /* great way to debug our media rule */
+  /* great way to debug a media rule */
   /* body {
     background-color: red;
   } */
