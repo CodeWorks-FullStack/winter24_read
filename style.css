@@ -1,0 +1,79 @@
+body {
+  /* background-color: red; */
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.bg-hero-img {
+  background: url(ReadHero.png);
+}
+
+.brand-font {
+  font-family: "Karantina", system-ui;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2em;
+}
+
+.giant-font {
+  font-size: 80px;
+}
+
+.tall-paragraph {
+  line-height: 2em;
+}
+
+.transform-card {
+  transform: translateY(2em);
+  /* transform: scaleY(2); */
+}
+
+.magic-container {
+  position: relative;
+  /* relative creates us a new "containing-block" for our absolute item*/
+}
+
+.magic-card {
+  position: absolute;
+  /* absolute pulls this element out of the html flow, and anchors is to the nearest parent "Containing-block" */
+  top: 0;
+  left: 10px;
+  /* right: 100px; */
+  /* bottom: 50%; */
+}
+
+.filter-menu {
+  top: 3em;
+}
+
+.card img {
+  height: 12em;
+  object-fit: cover;
+  object-position: center;
+  /* background-color: rgba(128, 128, 128, 0.529); */
+}
+
+
+@media screen and (min-width: 768px) {
+
+  /* NOTE what ever classes are in here, TURN ON at the medium break point */
+  .relative-card {
+    position: relative;
+    top: 8em;
+  }
+
+  .card-offset-bottom {
+    margin-top: 6em;
+  }
+
+  .card-offset-top {
+    margin-bottom: -8em;
+  }
+
+  /* great way to debug our media rule */
+  /* body {
+    background-color: red;
+  } */
+}
